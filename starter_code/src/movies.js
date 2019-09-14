@@ -1,13 +1,37 @@
 /* eslint no-restricted-globals: 'off' */
 
 // Iteration 1: All rates average - Get the average of all rates with 2 decimals 
+function ratesAverage(arr){
+    let ratingsSum = 0
+    for (i = 0; i < arr.length; i++) {
+        ratingsSum += parseFloat(arr[i].rate)
+    }
+   return parseFloat((ratingsSum/arr.length).toFixed(2)); 
+}
 
- 
 // Iteration 2: Drama movies - Get the average of Drama Movies
-
+function dramaMoviesRate(arr){
+    var ratingsSum = 0
+    var dramaCounter = 0
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].genre.includes(`Drama`) == true) {
+            ratingsSum += parseFloat(arr[i].rate)
+            dramaCounter++
+        } 
+    }
+    if (dramaCounter > 0) {
+        return parseFloat((ratingsSum/dramaCounter).toFixed(2));
+    } else {
+        return 0;
+    }
+}
 
 // Iteration 3: Ordering by duration - Order by time duration, ascending (in growing order)
-
+function orderByDuration(arr) {
+    for (i = 0; i < arr.length; i++){
+        
+    }
+}
 
 // Iteration 4: Steven Spielberg. The best? - How many movies did STEVEN SPIELBERG direct
 
